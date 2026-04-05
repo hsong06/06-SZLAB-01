@@ -1,0 +1,17 @@
+type          3 Li Zr Cl  # this is a mandatory keyword
+version       4       # default
+cutoff        6 5     # default 8 4
+n_max         8 8     # default 4 4 the number of radial and angular descriptor components
+basis_size    12 12    # default 8 8 the number of basis functions that are used to build the radial and angular descriptor functions
+l_max         4 2 0   # default        the number of basis functions that are used to build the radial and angular descriptor functions
+neuron        50      # default 30
+zbl           1.2     # spline the pair potential to the universal ZBL potential at short distances
+lambda_1      0.05
+lambda_2      0.05
+lambda_e      1.0     # default
+lambda_f      1.0     # default
+lambda_v      1.0     # default
+#batch         10000     # default 1000  the size of each batch used during the optimization procedure
+#population    50      # default  the size of the population used by the SNES algorithm
+#generation    100000  # default 100000
+prediction 1

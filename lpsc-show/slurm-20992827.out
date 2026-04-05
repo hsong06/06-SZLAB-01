@@ -1,0 +1,161 @@
+Fri Apr  3 12:35:28 CST 2026
+
+***************************************************************
+*                 Welcome to use GPUMD                        *
+*    (Graphics Processing Units Molecular Dynamics)           *
+*                     version 4.1                             *
+*              This is the nep executable                     *
+***************************************************************
+
+
+---------------------------------------------------------------
+GPU information:
+---------------------------------------------------------------
+
+number of GPUs = 1
+Device id:                   0
+    Device name:             NVIDIA GeForce RTX 3090
+    Compute capability:      8.6
+    Amount of global memory: 23.6843 GB
+    Number of SMs:           82
+
+---------------------------------------------------------------
+Started running nep.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Started reading nep.in.
+---------------------------------------------------------------
+
+Input or default parameters:
+    (default) model_type = potential.
+    (input)   calculation mode = predict.
+    (input)   use NEP version 4.
+    (input)   number of atom types = 4.
+        (default) type 0 (Li with Z = 3) has force weight of 1.
+        (default) type 1 (P with Z = 15) has force weight of 1.
+        (default) type 2 (S with Z = 16) has force weight of 1.
+        (default) type 3 (Cl with Z = 17) has force weight of 1.
+    (input)   will add the universal ZBL potential with outer cutoff 1.6 A and inner cutoff 0.8 A.
+    (input)   radial cutoff = 8 A.
+    (input)   angular cutoff = 4 A.
+    (default) use global cutoff for NEP.
+    (default) use global cutoff for ZBL.
+    (input)   n_max_radial = 6.
+    (input)   n_max_angular = 4.
+    (input)   basis_size_radial = 10.
+    (input)   basis_size_angular = 8.
+    (input)   l_max_3body = 4.
+    (input)   l_max_4body = 2.
+    (input)   l_max_5body = 0.
+    (input)   number of neurons = 50.
+    (input)   lambda_1 = 0.05.
+    (input)   lambda_2 = 0.05.
+    (input)   lambda_e = 1.
+    (input)   lambda_f = 1.
+    (input)   lambda_v = 0.1.
+    (default) atomic_v = 0.
+    (default) lambda_shear = 1.
+    (default) force_delta = 0.
+    (default) batch size = 1000.
+    (default) population size = 50.
+    (default) maximum number of generations = 100000.
+    (input)   save potential every N = 100000 generations.
+Some calculated parameters:
+    number of radial descriptor components = 7.
+    number of angular descriptor components = 25.
+    total number of descriptor components = 32.
+    NN architecture = 32-50-1.
+    number of NN parameters to be optimized = 6801.
+    number of descriptor parameters to be optimized = 1952.
+    total number of parameters to be optimized = 8753.
+
+---------------------------------------------------------------
+Finished reading nep.in.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Started reading train.xyz
+---------------------------------------------------------------
+
+Number of configurations = 1260.
+Number of devices = 1
+Number of batches = 2
+Hello, I changed the batch_size from 1000 to 630.
+
+Batch 0:
+Number of configurations = 630.
+
+---------------------------------------------------------------
+Constructing train_set in device  0.
+Total number of atoms = 63492.
+Number of atoms in the largest configuration = 416.
+Number of configurations having virial = 630.
+Radial descriptor with a cutoff of 8 A:
+    Minimum number of neighbors for one atom = 86.
+    Maximum number of neighbors for one atom = 135.
+Angular descriptor with a cutoff of 4 A:
+    Minimum number of neighbors for one atom = 5.
+    Maximum number of neighbors for one atom = 22.
+---------------------------------------------------------------
+
+
+Batch 1:
+Number of configurations = 630.
+
+---------------------------------------------------------------
+Constructing train_set in device  0.
+Total number of atoms = 34320.
+Number of atoms in the largest configuration = 104.
+Number of configurations having virial = 630.
+Radial descriptor with a cutoff of 8 A:
+    Minimum number of neighbors for one atom = 86.
+    Maximum number of neighbors for one atom = 132.
+Angular descriptor with a cutoff of 4 A:
+    Minimum number of neighbors for one atom = 6.
+    Maximum number of neighbors for one atom = 21.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Started reading test.xyz
+---------------------------------------------------------------
+
+Number of configurations = 1260.
+
+---------------------------------------------------------------
+Constructing test_set in device  0.
+Total number of atoms = 97812.
+Number of atoms in the largest configuration = 416.
+Number of configurations having virial = 1260.
+Radial descriptor with a cutoff of 8 A:
+    Minimum number of neighbors for one atom = 86.
+    Maximum number of neighbors for one atom = 135.
+Angular descriptor with a cutoff of 4 A:
+    Minimum number of neighbors for one atom = 5.
+    Maximum number of neighbors for one atom = 22.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Time used for initialization = 0.751478 s.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Started predicting.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Time used for predicting = 0.263196 s.
+---------------------------------------------------------------
+
+
+---------------------------------------------------------------
+Finished running nep.
+---------------------------------------------------------------
+
+Fri Apr  3 12:35:30 CST 2026
